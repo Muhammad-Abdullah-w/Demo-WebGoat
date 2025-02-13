@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@main   # Use the latest stable version
+        uses: actions/checkout@v4   # Use the latest stable version
       - name: Run Codacy Analysis CLI
         uses: codacy/codacy-analysis-cli-action@master   # Use a stable version tag
         with:
@@ -22,6 +22,6 @@ jobs:
           gh-code-scanning-compat: true
           max-allowed-issues: 2147483647
       - name: Upload SARIF results file
-        uses: github/codeql-action/upload-sarif@master   # Use the correct version
+        uses: github/codeql-action/upload-sarif@v3   # Use the correct version
         with:
           sarif_file: results.sarif
