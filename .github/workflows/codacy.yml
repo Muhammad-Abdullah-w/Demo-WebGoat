@@ -14,7 +14,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2   # Use the latest stable version
       - name: Run Codacy Analysis CLI
-        uses: codacy/codacy-analysis-cli-action@v1   # Use a stable version tag
+        uses: codacy/codacy-analysis-cli-action@master   # Use a stable version tag
         with:
           api-token: ${{ secrets.CODACY_API_TOKEN }} 
           output: results.sarif
